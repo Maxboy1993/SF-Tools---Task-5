@@ -8,10 +8,8 @@
         <option name="defaultSourceRootUrl" value="file://$MODULE_DIR$/src" />
         <option name="moduleContents">
           <ModuleContents>
-            <option name="contentSelectionType" value="SELECTED" />
-            <option name="manifest">
-              <Manifest />
-            </option>
+            <option name="contentSelectionType" value="PACKAGE_XML" />
+            <option name="packageXmlRelativePath" value="src/package.xml" />
           </ModuleContents>
         </option>
       </configuration>
