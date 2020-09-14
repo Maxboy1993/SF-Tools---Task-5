@@ -6,13 +6,19 @@ public with sharing class AccountTaskCreator {
 
     @InvocableMethod(label='Creat Task' category='Account')
     public static void createTask(List<variables> vars) {
-        Id accountId = vars[0].Id;
-        String accountName = vars[0].Name;
+        List<Account> accounts = new List<Account>();
+        List<Task> tasks = new List<Task>();
+        for (variables var : vars) {
+            accounts.add(new Account(Id = var.Id, Name = var.Name));
+        }
 
+        for (Account acc : accounts) {
             Task createdTask = new Task();
-            createdTask.WhatId = accountId;
-            createdTask.Subject = 'Negotiations with ' + accountName;
-            insert createdTask;
+            createdTask.WhatId = acc.Id;
+            createdTask.Subject = 'Negotiations with ' + acc.Name;
+            tasks.add(createdTask);
+        }
+        insert tasks;
     }
 
     public class variables {

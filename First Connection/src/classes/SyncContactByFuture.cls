@@ -15,7 +15,7 @@ public with sharing class SyncContactByFuture {
                 contactsList.add(acc.Contacts);
             }
         }
-        if (contactsList.size() > 0) {
+        if (!contactsList.isEmpty()) {
             for (Contact cont : contactsList){
                 cont.Is_Synced__c = false;
                 cont.Processed_By_Future__c = true;

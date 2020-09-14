@@ -34,6 +34,5 @@ global with sharing class SyncContactByBatchJob implements Database.Batchable<sO
         update contactsList;
     }
     global void finish(Database.BatchableContext bc) {
-        // execute any post-processing operations
     }
 }

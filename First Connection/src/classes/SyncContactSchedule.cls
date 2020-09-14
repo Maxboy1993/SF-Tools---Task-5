@@ -10,6 +10,5 @@ public with sharing class SyncContactSchedule implements Schedulable {
 
         SyncContactByBatchJobIterable syncContactByBatchJobIterable = new SyncContactByBatchJobIterable();
         Id batchId2 = Database.executeBatch(syncContactByBatchJobIterable);
-
     }
 }
